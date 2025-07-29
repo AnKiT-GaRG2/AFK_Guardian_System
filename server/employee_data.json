@@ -1,0 +1,1040 @@
+{
+    "1": {
+        "2025-03-08T04:13:06.997527": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T04:13:04.911199",
+            "window_activity": {
+                "Eye Tracking": {
+                    "time_spent": 60,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 15,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0,
+                "NOT SPEAKING": 39,
+                "SPEAKING": 21
+            }
+        },
+        "2025-03-08T05:20:15.123456": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T05:20:10.654321",
+            "window_activity": {
+                "sum.cpp": {
+                    "time_spent": 90,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 45,
+                            "text": "function calculateSum(a, b) { return a + b; }"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 1200,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 1,
+                            "text": "L"
+                        },
+                        "mouse_scrolls": {
+                            "count": 5,
+                            "text": "Scrolled through code"
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 85,
+                "eyes_closed_time": 3,
+                "eyes_not_detected_time": 2,
+                "NOT SPEAKING": 50,
+                "SPEAKING": 10
+            }
+        },
+        "2025-03-08T06:10:45.789123": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T06:10:40.987654",
+            "window_activity": {
+                "Youtube": {
+                    "time_spent": 120,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 25,
+                            "text": "AI research papers"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 900,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 5,
+                            "text": "LLLLR"
+                        },
+                        "mouse_scrolls": {
+                            "count": 20,
+                            "text": "Scrolled through articles"
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 100,
+                "eyes_closed_time": 10,
+                "eyes_not_detected_time": 10,
+                "NOT SPEAKING": 80,
+                "SPEAKING": 40
+            }
+        },
+        "2025-03-08T07:45:30.654321": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T07:45:25.321098",
+            "window_activity": {
+                "MEET": {
+                    "time_spent": 180,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 5,
+                            "text": "Meeting notes"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 400,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 8,
+                            "text": "LLLLLLLL"
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 160,
+                "eyes_closed_time": 5,
+                "eyes_not_detected_time": 15,
+                "NOT SPEAKING": 30,
+                "SPEAKING": 150
+            }
+        },
+        "2025-03-08T11:00:28.152821": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T11:00:26.091370",
+            "window_activity": {
+                "Eye Tracking": {
+                    "time_spent": 12,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": "yhjghfhghfh"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 799,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "main.py - RoboSaga - Visual Studio Code": {
+                    "time_spent": 25,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 3296,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 2,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "employee_data.json - RoboSaga - Visual Studio Code": {
+                    "time_spent": 23,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 889,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 1,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 1,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0,
+                "NOT SPEAKING": 48,
+                "SPEAKING": 12
+            }
+        },
+        "2025-03-08T11:01:30.261583": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T11:01:28.228765",
+            "window_activity": {
+                "employee_data.json - RoboSaga - Visual Studio Code": {
+                    "time_spent": 42,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 8542,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 1,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "Vite + React and 12 more pages - Personal - Microsoft\u200b Edge": {
+                    "time_spent": 18,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 5596,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 2,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 0,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0,
+                "NOT SPEAKING": 57,
+                "SPEAKING": 3
+            }
+        },
+        "2025-03-08T11:02:32.413774": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T11:02:30.356073",
+            "window_activity": {
+                "Vite + React and 12 more pages - Personal - Microsoft\u200b Edge": {
+                    "time_spent": 14,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 1836,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 2,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "employee_data.json - RoboSaga - Visual Studio Code": {
+                    "time_spent": 10,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 3615,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 1,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "main.py - RoboSaga - Visual Studio Code": {
+                    "time_spent": 34,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 5023,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 1,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "Eye Tracking": {
+                    "time_spent": 2,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 440,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 1,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 121,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0,
+                "NOT SPEAKING": 59,
+                "SPEAKING": 1
+            }
+        },
+        "2025-03-08T11:03:34.531795": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T11:03:32.481545",
+            "window_activity": {
+                "Vite + React and 12 more pages - Personal - Microsoft\u200b Edge": {
+                    "time_spent": 60,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": "dgffggsfgdfsggfdsfdgsgdfsgsdfgsgsfdfgsgdgfgsgdfsdgsddsdsdsddgdddgsddfgddgfsdfdsgdddgdfdsdgsdfsddssssssssdsdssdgdddddfdfddsdfgdg"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 4502,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 11,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 113,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0,
+                "NOT SPEAKING": 59,
+                "SPEAKING": 1
+            }
+        },
+        "2025-03-08T11:04:36.643668": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T11:04:34.599026",
+            "window_activity": {
+                "Vite + React and 12 more pages - Personal - Microsoft\u200b Edge": {
+                    "time_spent": 60,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": "dgsddsdgfdfggsdsdsxvcxcgsdddddhsdsfddddssdssdghssgbgsfggscgsggdggsggdddfsgdfffsffff"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 6948,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 0,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0,
+                "NOT SPEAKING": 55,
+                "SPEAKING": 5
+            }
+        },
+        "2025-03-08T11:05:38.764075": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T11:05:36.713697",
+            "window_activity": {
+                "Vite + React and 12 more pages - Personal - Microsoft\u200b Edge": {
+                    "time_spent": 60,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 15881,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 0,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0,
+                "NOT SPEAKING": 60
+            }
+        },
+        "2025-03-08T11:06:40.914727": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T11:06:38.853791",
+            "window_activity": {
+                "Vite + React and 12 more pages - Personal - Microsoft\u200b Edge": {
+                    "time_spent": 24,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 4796,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "main.py - RoboSaga - Visual Studio Code": {
+                    "time_spent": 17,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 3050,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 6,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "EmployeeDetail.jsx - RoboSaga - Visual Studio Code": {
+                    "time_spent": 15,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": "\u0003"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 3070,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 3,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "": {
+                    "time_spent": 1,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 1,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "Python installation path - Google Chrome": {
+                    "time_spent": 3,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 289,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 190,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0,
+                "NOT SPEAKING": 59,
+                "SPEAKING": 1
+            }
+        },
+        "2025-03-08T11:07:43.037377": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T11:07:40.984617",
+            "window_activity": {
+                "Python installation path - Google Chrome": {
+                    "time_spent": 50,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": "\u0016fixthepiecha"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 6243,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 4,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "Vite + React and 12 more pages - Personal - Microsoft\u200b Edge": {
+                    "time_spent": 10,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 1217,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 1,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 23,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 29,
+                "NOT SPEAKING": 60
+            }
+        },
+        "2025-03-08T11:08:45.178252": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T11:08:43.116552",
+            "window_activity": {
+                "Vite + React and 12 more pages - Personal - Microsoft\u200b Edge": {
+                    "time_spent": 4,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 1555,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "Python installation path - Google Chrome": {
+                    "time_spent": 52,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": "fixthepiechartinthegivencode"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 3627,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 4,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "Open": {
+                    "time_spent": 4,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 1489,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 2,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 46,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 3,
+                "NOT SPEAKING": 60
+            }
+        },
+        "2025-03-08T11:09:47.293957": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T11:09:45.246301",
+            "window_activity": {
+                "Python installation path - Google Chrome": {
+                    "time_spent": 60,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": "addascrollbarforthegivenlabeslsanddislplayallthethecompletyepiechart"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 3552,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 1,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 0,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0,
+                "NOT SPEAKING": 60
+            }
+        },
+        "2025-03-08T11:44:14.611161": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T11:44:12.545732",
+            "window_activity": {
+                "Eye Tracking": {
+                    "time_spent": 4,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 1996,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "WhatsApp": {
+                    "time_spent": 3,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 598,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 3,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "main.py - RoboSaga - Visual Studio Code": {
+                    "time_spent": 2,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 1424,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "Vite + React and 13 more pages - Personal - Microsoft\u200b Edge": {
+                    "time_spent": 36,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": "shfdshg"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 10259,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 4,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "C:\\Windows\\System32\\cmd.exe": {
+                    "time_spent": 3,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 1725,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 2,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 51,
+                            "text": ""
+                        }
+                    }
+                },
+                "Inference manager feedback warning - Google Chrome": {
+                    "time_spent": 12,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 2522,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 1,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 39,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0,
+                "NOT SPEAKING": 53,
+                "SPEAKING": 7
+            }
+        },
+        "2025-03-08T11:45:16.746955": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T11:45:14.684342",
+            "window_activity": {
+                "Vite + React and 13 more pages - Personal - Microsoft\u200b Edge": {
+                    "time_spent": 38,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": "gdsfdsgjhfgdsjhfgdshjfghsdfgdshfjashgfhfgasjhdfgsdjhfdjgjfgfdsghjgfsdkfgdshgfhfdsffsfhsjkdfsdgafhdsgsdfkhdsfkgfgsdfffsdjgfsdjbfjvsdfvsjhfhasdfgsdhfsgdkhfgsdfgkdfkgsdfsdgkvsejfgdsgvsdkfggvsdgkfgksdgfsdfgygvsddddddddddgsdyugdsgdsghvgsdfgdsgfdgfsdgfgdddgdggdsfgdsfhsdfgkksdfdskgfgdskfdshkjfdhfsdkfsdgsdkfsdhfgksdhfsdgfsdhfgsdhkgfdsgvdsgvdsvghdfsgkdsgdfvsgfdsdshgdgfsdgkd"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 2342,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "main.py - RoboSaga - Visual Studio Code": {
+                    "time_spent": 22,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 2838,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 1,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 67,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0,
+                "NOT SPEAKING": 59,
+                "SPEAKING": 1
+            }
+        },
+        "2025-03-08T11:46:18.865566": {
+            "employee_id": 1,
+            "timestamp": "2025-03-08T11:46:16.815122",
+            "window_activity": {
+                "main.py - RoboSaga - Visual Studio Code": {
+                    "time_spent": 20,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 952,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 2,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "App.css - RoboSaga - Visual Studio Code": {
+                    "time_spent": 23,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 2772,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 10,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "employee_data.json - RoboSaga - Visual Studio Code": {
+                    "time_spent": 6,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 435,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 2,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "EmployeeDetail.jsx - RoboSaga - Visual Studio Code": {
+                    "time_spent": 11,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 623,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 1,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "eyes_open_time": 0,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0,
+                "NOT SPEAKING": 58,
+                "SPEAKING": 2
+            }
+        }
+    }
+}

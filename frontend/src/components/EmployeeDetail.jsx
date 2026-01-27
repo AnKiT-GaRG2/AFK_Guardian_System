@@ -13,10 +13,17 @@ const employees = [
 const COLORS = ['#4CAF50', '#F44336'];
 
 const calculateProductivity = (activitySummary) => {
-  let { NOT_SPEAKING, SPEAKING, eyes_open_time } = activitySummary;
-  NOT_SPEAKING = activitySummary['NOT SPEAKING'];
-  const x =  (NOT_SPEAKING + eyes_open_time) / (SPEAKING + NOT_SPEAKING + eyes_open_time+eyes_closed_time +eyes_not_detected_time) * 100;
-  console.log(x);
+  const NOT_SPEAKING = activitySummary['NOT SPEAKING'] || 0;
+  const SPEAKING = activitySummary['SPEAKING'] || 0;
+  const eyes_open_time = activitySummary['eyes_open_time'] || 0;
+  const eyes_closed_time = activitySummary['eyes_closed_time'] || 0;
+  const eyes_not_detected_time = activitySummary['eyes_not_detected_time'] || 0;
+  
+  const total = SPEAKING + NOT_SPEAKING + eyes_open_time + eyes_closed_time + eyes_not_detected_time;
+  if (total === 0) return 0;
+  
+  const x = (NOT_SPEAKING + eyes_open_time) / total * 100;
+  console.log('Productivity:', x);
   return x;
 };
 

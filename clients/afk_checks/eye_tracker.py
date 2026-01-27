@@ -1,13 +1,16 @@
 import cv2
-import mediapipe as mp
+try:
+    import mediapipe as mp
+    mp_face_mesh = mp.solutions.face_mesh
+    face_mesh = mp_face_mesh.FaceMesh(min_detection_confidence=0.5, min_tracking_confidence=0.5)
+except (AttributeError, ImportError):
+    # Fallback if mediapipe is not available or doesn't have solutions
+    mp = None
+    mp_face_mesh = None
+    face_mesh = None
 import numpy as np
 import time
 import threading
-
-# Initialize MediaPipe FaceMesh
-
-mp_face_mesh = mp.solutions.face_mesh
-face_mesh = mp_face_mesh.FaceMesh(min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
 # Eye landmark indices
 LEFT_EYE = [33, 133]
@@ -63,6 +66,10 @@ def reset_data():
 def detect_eyes():
     """Main function to run eye tracking."""
     global eyes_not_detected, last_state
+
+    if face_mesh is None:
+        print("MediaPipe not available, skipping eye tracking")
+        return
 
     while cap.isOpened():
         success, image = cap.read()

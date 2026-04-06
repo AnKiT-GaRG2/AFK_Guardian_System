@@ -1,13 +1,14 @@
 import React from 'react';
 import { FaUserCircle } from 'react-icons/fa';
+import logo from '../assets/AFK.png';
 
 function Navbar() {
   return (
     <nav className="w-full bg-blue-800/90 text-white py-4 shadow-2xl flex justify-between items-center px-6">
       {/* Logo */}
       <div className="flex items-center space-x-2">
-        {/* <img src="/logo.png" alt="Company Logo" className="h-10 w-10" /> */}
-        <h1 className="text-xl font-semibold">Employee Dashboard</h1>
+        <img src={logo} alt="AFK Guardian" className="h-10 w-10 object-contain" />
+        <h1 className="text-xl font-semibold">AFK Guardian</h1>
       </div>
 
       {/* Navigation Links */}

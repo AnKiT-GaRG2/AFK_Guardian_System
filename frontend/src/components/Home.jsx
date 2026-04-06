@@ -3,6 +3,7 @@
 // import { useRouter } from 'next/navigation';
 import { FaHome, FaUsers, FaChartBar, FaCog, FaSignOutAlt, FaPlus, FaTasks, FaFileAlt, FaUserCircle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/AFK.png';
 
 const employees = [
   { id: 1, name: 'Rohan Sharma', role: 'Software Engineer' },
@@ -18,7 +19,10 @@ export default function Home() {
       {/* Sidebar */}
       <aside className="w-72 bg-blue-800 text-white min-h-screen p-6 flex flex-col justify-between">
         <div>
-          <h2 className="text-2xl font-bold mb-6 text-center">Dashboard</h2>
+          <div className="flex flex-col items-center mb-6">
+            <img src={logo} alt="AFK Guardian" className="h-20 w-20 object-contain mb-2" />
+            <h2 className="text-2xl font-bold text-center">AFK Guardian</h2>
+          </div>
           <nav>
             <ul className="space-y-4">
               <li className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-700 transition cursor-pointer" onClick={() => router.push('/')}> 
@@ -70,7 +74,10 @@ export default function Home() {
       {/* Main Content */}
       <div className="flex-1 flex flex-col ">
       <nav className="w-full bg-blue-800 text-white py-4 px-6 flex justify-between items-center shadow-lg">
-          <h1 className="text-xl font-semibold">Employee Dashboard</h1>
+          <div className="flex items-center space-x-2">
+            <img src={logo} alt="AFK Guardian" className="h-10 w-10 object-contain" />
+            <h1 className="text-xl font-semibold">AFK Guardian</h1>
+          </div>
           <div className="flex items-center space-x-2 cursor-pointer">
             <FaUserCircle className="text-2xl" />
             <span className="text-sm">John Doe</span>

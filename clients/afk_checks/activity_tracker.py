@@ -1,5 +1,9 @@
 # activity_tracker.py
-from pynput import keyboard, mouse
+try:
+    from pynput import keyboard, mouse
+except ImportError:
+    keyboard = None
+    mouse = None
 from threading import Thread, Lock
 import time
 
@@ -54,6 +58,9 @@ def get_activity_data():
 
 # Background Tracking
 def start_tracking():
+    if keyboard is None or mouse is None:
+        return
+
     mouse_listener = mouse.Listener(on_move=on_move, on_click=on_click, on_scroll=on_scroll)
     keyboard_listener = keyboard.Listener(on_press=on_key_press)
 
@@ -64,5 +71,6 @@ def start_tracking():
     keyboard_listener.join()
 
 # Run tracking in a background thread
-tracking_thread = Thread(target=start_tracking, daemon=True)
-tracking_thread.start()
+if keyboard is not None and mouse is not None:
+    tracking_thread = Thread(target=start_tracking, daemon=True)
+    tracking_thread.start()

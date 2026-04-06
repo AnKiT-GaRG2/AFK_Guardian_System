@@ -41,6 +41,8 @@ def check_user_activity():
 
 def check_voice_activity(tracker):
     status = tracker.get_speaking_status()
+    if status is None:
+        return None
     if(status==0):
         return "SPEAKING"
     else:
@@ -59,7 +61,10 @@ def main():
         "time_spent": 0, 
         "activities": defaultdict(lambda: {"count": 0, "text": ""})
     })
-    new_map = defaultdict(int)
+    new_map = defaultdict(int, {
+        "SPEAKING": 0,
+        "NOT SPEAKING": 0
+    })
 
     tracker = VoiceTracker()
     eye_tracker.start_eye_tracking()
@@ -80,12 +85,16 @@ def main():
         for key, value in check_user_activity().items():
             new_map[key] += int(value)  
         
-        new_map[check_voice_activity(tracker)] += 1    
+        voice_state = check_voice_activity(tracker)
+        if voice_state is not None:
+            new_map[voice_state] += 1
 
         for key, value in keyboad_tracker().items():
             if isinstance(value, str):  
                 # Store string values in the "text" field
                 my_map[active_window]["activities"][key]["text"] += value  
+                if key == "keyboard_activity":
+                    my_map[active_window]["activities"][key]["count"] += len(value)
             else:  
                 # Store numeric values in the "count" field
                 my_map[active_window]["activities"][key]["count"] += int(value)
@@ -98,6 +107,9 @@ def main():
             print(new_map)  # Print new activity summary
             
             # Prepare the payload combining both maps
+            new_map["SPEAKING"] += 0
+            new_map["NOT SPEAKING"] += 0
+
             payload = {
                 "employee_id": EMPLOYEE_ID,
                 "timestamp": datetime.datetime.now().isoformat(),
@@ -123,7 +135,10 @@ def main():
             "time_spent": 0, 
             "activities": defaultdict(lambda: {"count": 0, "text": ""})
             })
-            new_map = defaultdict(int)
+            new_map = defaultdict(int, {
+                "SPEAKING": 0,
+                "NOT SPEAKING": 0
+            })
         
 
 if __name__ == "__main__":

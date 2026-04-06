@@ -11,20 +11,122 @@ const employees = [
 ];
 
 const COLORS = ['#4CAF50', '#F44336'];
+const PRODUCTIVE_WINDOW_KEYWORDS = [
+  'visual studio code',
+  'vscode',
+  'code',
+  'chrome',
+  'google chrome',
+  'jetbrains',
+  'pycharm',
+  'intellij',
+  'terminal',
+  'bash',
+  'zsh'
+];
 
-const calculateProductivity = (activitySummary) => {
-  const NOT_SPEAKING = activitySummary['NOT SPEAKING'] || 0;
-  const SPEAKING = activitySummary['SPEAKING'] || 0;
-  const eyes_open_time = activitySummary['eyes_open_time'] || 0;
-  const eyes_closed_time = activitySummary['eyes_closed_time'] || 0;
-  const eyes_not_detected_time = activitySummary['eyes_not_detected_time'] || 0;
-  
-  const total = SPEAKING + NOT_SPEAKING + eyes_open_time + eyes_closed_time + eyes_not_detected_time;
-  if (total === 0) return 0;
-  
-  const x = (NOT_SPEAKING + eyes_open_time) / total * 100;
-  console.log('Productivity:', x);
-  return x;
+const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+const calculateProductivity = (details) => {
+  const activitySummary = details?.activity_summary || {};
+  const windowActivity = details?.window_activity || {};
+
+  const speakingTime = activitySummary['SPEAKING'] || 0;
+  const notSpeakingTime = activitySummary['NOT SPEAKING'] || 0;
+  const eyesOpenTime = activitySummary['eyes_open_time'] || 0;
+  const eyesClosedTime = activitySummary['eyes_closed_time'] || 0;
+  const eyesNotDetectedTime = activitySummary['eyes_not_detected_time'] || 0;
+
+  const eyeTotal = eyesOpenTime + eyesClosedTime + eyesNotDetectedTime;
+  const voiceTotal = speakingTime + notSpeakingTime;
+
+  const eyeScore = eyeTotal > 0
+    ? clamp((eyesOpenTime - 0.4 * eyesClosedTime - 0.9 * eyesNotDetectedTime) / eyeTotal, 0, 1)
+    : 0.5;
+
+  const voiceScore = voiceTotal > 0
+    ? clamp((notSpeakingTime + 0.6 * speakingTime) / voiceTotal, 0, 1)
+    : 0.5;
+
+  let totalKeyboard = 0;
+  let totalMouseMovement = 0;
+  let totalMouseClicks = 0;
+  let totalMouseScrolls = 0;
+  let totalTrackedWindowTime = 0;
+  let maxSingleWindowTime = 0;
+  let productiveWindowTime = 0;
+
+  Object.entries(windowActivity).forEach(([windowName, windowEntry]) => {
+    const timeSpent = windowEntry?.time_spent || 0;
+    const activities = windowEntry?.activities || {};
+    const normalizedWindowName = (windowName || '').toLowerCase();
+    const isProductiveWindow = PRODUCTIVE_WINDOW_KEYWORDS.some((keyword) => normalizedWindowName.includes(keyword));
+
+    totalTrackedWindowTime += timeSpent;
+    maxSingleWindowTime = Math.max(maxSingleWindowTime, timeSpent);
+    if (isProductiveWindow) {
+      productiveWindowTime += timeSpent;
+    }
+
+    totalKeyboard += activities?.keyboard_activity?.count || 0;
+    totalMouseMovement += activities?.mouse_movement_distance?.count || 0;
+    totalMouseClicks += activities?.mouse_clicks?.count || 0;
+    totalMouseScrolls += activities?.mouse_scrolls?.count || 0;
+  });
+
+  const keyboardSignal = clamp(totalKeyboard / 60, 0, 1);
+  const movementSignal = clamp(totalMouseMovement / 5000, 0, 1);
+  const clickSignal = clamp(totalMouseClicks / 12, 0, 1);
+  const scrollSignal = clamp(totalMouseScrolls / 40, 0, 1);
+
+  const interactionScore = clamp(
+    0.4 * keyboardSignal +
+    0.25 * movementSignal +
+    0.2 * clickSignal +
+    0.15 * scrollSignal,
+    0,
+    1
+  );
+
+  const focusScore = totalTrackedWindowTime > 0
+    ? clamp(maxSingleWindowTime / totalTrackedWindowTime, 0, 1)
+    : 0.5;
+
+  const productiveWindowScore = totalTrackedWindowTime > 0
+    ? clamp(productiveWindowTime / totalTrackedWindowTime, 0, 1)
+    : 0.5;
+
+  const weightedScore = clamp(
+    0.3 * eyeScore +
+    0.15 * voiceScore +
+    0.3 * interactionScore +
+    0.1 * focusScore +
+    0.15 * productiveWindowScore,
+    0,
+    1
+  );
+
+  return Math.round(weightedScore * 100);
+};
+
+const buildDashboardData = (activityData) => {
+  const graphData = Object.entries(activityData).map(([date, details]) => ({
+    date,
+    productivity: calculateProductivity(details),
+  }));
+
+  const mouseWindowData = Object.entries(activityData).flatMap(([date, details]) =>
+    Object.entries(details?.window_activity || {}).map(([window, activity]) => ({
+      date,
+      window,
+      keyboardActivity: activity?.activities?.keyboard_activity?.count || 0,
+      mouseClicks: activity?.activities?.mouse_clicks?.count || 0,
+      mouseMovements: activity?.activities?.mouse_movement_distance?.count || 0,
+      mouseScrolls: activity?.activities?.mouse_scrolls?.count || 0,
+    }))
+  );
+
+  return { graphData, mouseWindowData };
 };
 
 export default function EmployeeDetail() {
@@ -34,41 +136,52 @@ export default function EmployeeDetail() {
   const [windowMouseData, setWindowMouseData] = useState([]);
 
   useEffect(() => {
+    let eventSource;
+
+    const updateDashboardState = (responseData) => {
+      setData(responseData);
+      const activityData = responseData?.data;
+      if (activityData) {
+        const { graphData, mouseWindowData } = buildDashboardData(activityData);
+        setProductivityGraphData(graphData);
+        setWindowMouseData(mouseWindowData);
+      }
+    };
+
     const fetchData = async () => {
       try {
         const response = await axios.get(`http://localhost:5000/employee/${id}`);
-        setData(response.data);
-
-        const activityData = response.data?.data;
-      
-        if (activityData) {
-          const graphData = Object.entries(activityData).map(([date, details]) => ({
-            date,
-            productivity: calculateProductivity(details.activity_summary),
-            
-          }));
-          setProductivityGraphData(graphData);
-
-          const mouseWindowData = Object.entries(activityData).flatMap(([date, details]) =>
-            Object.entries(details.window_activity).map(([window, activity]) => ({
-              date,
-              window,
-              keyboardActivity: activity.activities.keyboard_activity.count,
-              mouseClicks: activity.activities.mouse_clicks.count,
-              mouseMovements: activity.activities.mouse_movement_distance.count,
-              mouseScrolls: activity.activities.mouse_scrolls.count,
-            }))
-          );
-          setWindowMouseData(mouseWindowData);
-        }
+        updateDashboardState(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-    
+
     fetchData();
-    const interval = setInterval(fetchData, 10000); // Fetch data every 10 seconds
-    return () => clearInterval(interval);
+
+    eventSource = new EventSource(`http://localhost:5000/employee/${id}/stream`);
+    eventSource.onmessage = (event) => {
+      try {
+        const payload = JSON.parse(event.data);
+        if (payload?.status === 'success' && payload?.data) {
+          updateDashboardState(payload);
+        }
+      } catch (error) {
+        console.error("Error parsing stream data:", error);
+      }
+    };
+
+    eventSource.onerror = (error) => {
+      console.error("Stream error:", error);
+    };
+
+    const interval = setInterval(fetchData, 10000);
+    return () => {
+      clearInterval(interval);
+      if (eventSource) {
+        eventSource.close();
+      }
+    };
   }, [id]);
 
   const employee = employees.find(emp => emp.id === parseInt(id));

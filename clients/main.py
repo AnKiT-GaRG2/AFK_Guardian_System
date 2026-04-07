@@ -35,8 +35,6 @@ def get_active_window_title():
 def check_user_activity():
     """Check Eye Movement."""
     data = eye_tracker.return_data()
-    eye_tracker.reset_data()
-    
     return data
 
 def check_voice_activity(tracker):
@@ -83,7 +81,7 @@ def main():
 
         # ✅ Track user activity in new_map
         for key, value in check_user_activity().items():
-            new_map[key] += int(value)  
+            new_map[key] += float(value)
         
         voice_state = check_voice_activity(tracker)
         if voice_state is not None:
@@ -129,6 +127,8 @@ def main():
                     print(f"Error response: {response.text}")
             except Exception as e:
                 print(f"Failed to send data: {e}")
+
+            eye_tracker.reset_data()
             
             # ✅ Reset maps while keeping the structure intact
             my_map = defaultdict(lambda: {

@@ -1,43 +1,22 @@
 {
     "1": {
-        "2026-04-06T23:05:53.548195": {
+        "2026-04-07T10:05:25.786346": {
             "employee_id": 1,
-            "timestamp": "2026-04-06T23:05:53.532403",
+            "timestamp": "2026-04-07T10:05:25.768921",
             "window_activity": {
-                "Eye Tracking": {
-                    "time_spent": 2,
+                "Unknown Window": {
+                    "time_spent": 30,
                     "activities": {
                         "keyboard_activity": {
                             "count": 0,
                             "text": ""
                         },
                         "mouse_movement_distance": {
-                            "count": 2019,
+                            "count": 0,
                             "text": ""
                         },
                         "mouse_clicks": {
                             "count": 0,
-                            "text": ""
-                        },
-                        "mouse_scrolls": {
-                            "count": 0,
-                            "text": ""
-                        }
-                    }
-                },
-                "employee_data.json - AFK_Guardian_System - Visual Studio Code": {
-                    "time_spent": 28,
-                    "activities": {
-                        "keyboard_activity": {
-                            "count": 1,
-                            "text": "a"
-                        },
-                        "mouse_movement_distance": {
-                            "count": 7290,
-                            "text": ""
-                        },
-                        "mouse_clicks": {
-                            "count": 4,
                             "text": ""
                         },
                         "mouse_scrolls": {
@@ -48,11 +27,351 @@
                 }
             },
             "activity_summary": {
-                "SPEAKING": 11,
-                "NOT SPEAKING": 19,
+                "SPEAKING": 0,
+                "NOT SPEAKING": 0,
                 "eyes_open_time": 0,
                 "eyes_closed_time": 0,
-                "eyes_not_detected_time": 29
+                "eyes_not_detected_time": 0
+            }
+        },
+        "2026-04-07T10:05:55.935582": {
+            "employee_id": 1,
+            "timestamp": "2026-04-07T10:05:55.925135",
+            "window_activity": {
+                "Unknown Window": {
+                    "time_spent": 30,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "SPEAKING": 0,
+                "NOT SPEAKING": 0,
+                "eyes_open_time": 0,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0
+            }
+        },
+        "2026-04-07T10:06:26.087957": {
+            "employee_id": 1,
+            "timestamp": "2026-04-07T10:06:26.082703",
+            "window_activity": {
+                "Unknown Window": {
+                    "time_spent": 30,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "SPEAKING": 0,
+                "NOT SPEAKING": 0,
+                "eyes_open_time": 0,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0
+            }
+        },
+        "2026-04-07T10:06:56.231147": {
+            "employee_id": 1,
+            "timestamp": "2026-04-07T10:06:56.227205",
+            "window_activity": {
+                "Unknown Window": {
+                    "time_spent": 30,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "SPEAKING": 0,
+                "NOT SPEAKING": 0,
+                "eyes_open_time": 0,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0
+            }
+        },
+        "2026-04-07T10:07:26.373377": {
+            "employee_id": 1,
+            "timestamp": "2026-04-07T10:07:26.371297",
+            "window_activity": {
+                "Unknown Window": {
+                    "time_spent": 30,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "SPEAKING": 0,
+                "NOT SPEAKING": 0,
+                "eyes_open_time": 0,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0
+            }
+        },
+        "2026-04-07T10:07:47.716303": {
+            "employee_id": 1,
+            "timestamp": "2026-04-07T10:07:47.707090",
+            "window_activity": {
+                "Unknown Window": {
+                    "time_spent": 30,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "SPEAKING": 0,
+                "NOT SPEAKING": 0,
+                "eyes_open_time": 0,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0
+            }
+        },
+        "2026-04-07T10:07:56.498523": {
+            "employee_id": 1,
+            "timestamp": "2026-04-07T10:07:56.495125",
+            "window_activity": {
+                "Unknown Window": {
+                    "time_spent": 30,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "SPEAKING": 0,
+                "NOT SPEAKING": 0,
+                "eyes_open_time": 0,
+                "eyes_closed_time": 0,
+                "eyes_not_detected_time": 0
+            }
+        },
+        "2026-04-07T10:11:45.310290": {
+            "employee_id": 1,
+            "timestamp": "2026-04-07T10:11:45.297108",
+            "window_activity": {
+                "Unknown Window": {
+                    "time_spent": 30,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 86,
+                            "text": "ayusdhsfjcvhsnotepadthisasisanonlinenotepadusedtostoreinformationsanoutbotutsomethiong"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 5258,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 5,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "SPEAKING": 0,
+                "NOT SPEAKING": 30,
+                "eyes_open_time": 575.31,
+                "eyes_closed_time": 0.0,
+                "eyes_not_detected_time": 0.0
+            }
+        },
+        "2026-04-07T10:12:23.345967": {
+            "employee_id": 1,
+            "timestamp": "2026-04-07T10:12:23.336838",
+            "window_activity": {
+                "Unknown Window": {
+                    "time_spent": 30,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 28,
+                            "text": "sotthertheiotherbvdnpmrundev"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 9805,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 5,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 490,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "SPEAKING": 0,
+                "NOT SPEAKING": 30,
+                "eyes_open_time": 581.89,
+                "eyes_closed_time": 0.0,
+                "eyes_not_detected_time": 0.0
+            }
+        },
+        "2026-04-07T10:13:01.331122": {
+            "employee_id": 1,
+            "timestamp": "2026-04-07T10:13:01.328990",
+            "window_activity": {
+                "Unknown Window": {
+                    "time_spent": 30,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 7291,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 4,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 224,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "SPEAKING": 0,
+                "NOT SPEAKING": 30,
+                "eyes_open_time": 580.82,
+                "eyes_closed_time": 0.0,
+                "eyes_not_detected_time": 0.0
+            }
+        },
+        "2026-04-07T10:13:39.274243": {
+            "employee_id": 1,
+            "timestamp": "2026-04-07T10:13:39.271652",
+            "window_activity": {
+                "Unknown Window": {
+                    "time_spent": 30,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 548,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 105,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "SPEAKING": 0,
+                "NOT SPEAKING": 30,
+                "eyes_open_time": 579.73,
+                "eyes_closed_time": 0.0,
+                "eyes_not_detected_time": 0.0
             }
         }
     }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaUserCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import logo from '../assets/AFK.png';
 
 function Navbar() {
@@ -13,16 +14,16 @@ function Navbar() {
 
       {/* Navigation Links */}
       <div className="hidden md:flex space-x-6">
-        <a href="/" className="hover:underline hover:text-blue-500">Home</a>
-        <a href="#" className="hover:underline">Analytics</a>
-        <a href="#" className="hover:underline">Reports</a>
+        <Link to="/" className="hover:underline hover:text-blue-500">Home</Link>
+        <Link to="/employees" className="hover:underline">Employees</Link>
+        <Link to="/reports" className="hover:underline">Reports</Link>
         <a href="#" className="hover:underline">Settings</a>
       </div>
 
       {/* User Profile */}
       <div className="flex items-center space-x-2 cursor-pointer">
         <FaUserCircle className="text-2xl" />
-        <span className="text-sm">John Doe</span>
+        <span className="text-sm">Admin</span>
       </div>
     </nav>
   );

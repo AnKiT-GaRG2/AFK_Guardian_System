@@ -1,5 +1,6 @@
 import subprocess
 import shutil
+import platform
 
 try:
     import pyautogui
@@ -13,6 +14,28 @@ def _run_command(command):
         return result
     except Exception:
         return ""
+
+
+def _get_macos_active_window_title():
+    # Frontmost app name is generally available when Accessibility permissions are granted.
+    app_name = _run_command([
+        "osascript",
+        "-e",
+        'tell application "System Events" to get name of first application process whose frontmost is true',
+    ])
+
+    # Window title may fail for apps without standard windows; keep app name as fallback.
+    window_title = _run_command([
+        "osascript",
+        "-e",
+        'tell application "System Events" to tell (first application process whose frontmost is true) to get name of front window',
+    ])
+
+    if window_title and app_name and window_title != app_name:
+        return f"{window_title} - {app_name}"
+    if window_title:
+        return window_title
+    return app_name
 
 
 def _get_linux_active_window_title():
@@ -35,6 +58,11 @@ def _get_linux_active_window_title():
     return ""
 
 def get_active_window():
+    if platform.system() == "Darwin":
+        mac_title = _get_macos_active_window_title()
+        if mac_title:
+            return mac_title
+
     linux_title = _get_linux_active_window_title()
     if linux_title:
         return linux_title

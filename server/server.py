@@ -6,12 +6,22 @@ import os
 from flask import request
 from datetime import datetime
 import time
+from policy_engine import DecisionPolicyEngine
 
 app = Flask(__name__)
 
 CORS(app)
 
 DATA_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "employee_data.json")
+policy_engine = DecisionPolicyEngine()
+
+
+def build_employee_response(employee_records):
+    return {
+        "status": "success",
+        "data": employee_records,
+        "policy_result": policy_engine.evaluate_employee(employee_records),
+    }
 
 
 def load_employee_data():
@@ -41,8 +51,8 @@ def get_state_times(employee_id):
     if employee_id not in employee_data:
         return jsonify({"status": "error", "message": f"Employee {employee_id} not found"}), 404
         
-    # Return the employee data
-    return jsonify({"status": "success", "data": employee_data[employee_id]})
+    # Return employee activity data and computed policy decision output
+    return jsonify(build_employee_response(employee_data[employee_id]))
     
 @app.route('/employee/<employee_id>', methods=['POST'])
 def update_employee_data(employee_id):
@@ -84,7 +94,7 @@ def stream_employee_data(employee_id):
                         elif employee_id not in employee_data:
                             payload = {"status": "error", "message": f"Employee {employee_id} not found"}
                         else:
-                            payload = {"status": "success", "data": employee_data[employee_id]}
+                            payload = build_employee_response(employee_data[employee_id])
 
                         yield f"data: {json.dumps(payload)}\n\n"
                         last_mtime = current_mtime

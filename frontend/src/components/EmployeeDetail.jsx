@@ -10,7 +10,20 @@ const employees = [
   { id: 3, name: 'Karan Mehta', role: 'Data Analyst', status: 'Distracted' },
 ];
 
-const COLORS = ['#4CAF50', '#F44336'];
+const PIE_COLOR_PALETTE = [
+  '#2563EB',
+  '#DC2626',
+  '#16A34A',
+  '#EA580C',
+  '#0D9488',
+  '#A855F7',
+  '#CA8A04',
+  '#DB2777',
+  '#7C3AED',
+  '#0891B2',
+  '#4F46E5',
+  '#65A30D'
+];
 const PRODUCTIVE_WINDOW_KEYWORDS = [
   'visual studio code',
   'vscode',
@@ -26,6 +39,17 @@ const PRODUCTIVE_WINDOW_KEYWORDS = [
 ];
 
 const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+const getStableColorForLabel = (label) => {
+  const text = (label || 'Unknown').toLowerCase();
+  let hash = 0;
+
+  for (let index = 0; index < text.length; index += 1) {
+    hash = (hash * 31 + text.charCodeAt(index)) >>> 0;
+  }
+
+  return PIE_COLOR_PALETTE[hash % PIE_COLOR_PALETTE.length];
+};
 
 const calculateProductivity = (details) => {
   const activitySummary = details?.activity_summary || {};
@@ -134,6 +158,8 @@ export default function EmployeeDetail() {
   const [data, setData] = useState(null);
   const [productivityGraphData, setProductivityGraphData] = useState([]);
   const [windowMouseData, setWindowMouseData] = useState([]);
+  const [policyResult, setPolicyResult] = useState(null);
+  const [payGraphData, setPayGraphData] = useState([]);
 
   useEffect(() => {
     let eventSource;
@@ -141,6 +167,17 @@ export default function EmployeeDetail() {
     const updateDashboardState = (responseData) => {
       setData(responseData);
       const activityData = responseData?.data;
+      const policyData = responseData?.policy_result;
+
+      if (policyData) {
+        setPolicyResult(policyData);
+        const payData = (policyData.records || []).map((record) => ({
+          date: record.timestamp,
+          accumulatedPay: record.accumulated_pay,
+        }));
+        setPayGraphData(payData);
+      }
+
       if (activityData) {
         const { graphData, mouseWindowData } = buildDashboardData(activityData);
         setProductivityGraphData(graphData);
@@ -186,6 +223,21 @@ export default function EmployeeDetail() {
 
   const employee = employees.find(emp => emp.id === parseInt(id));
 
+  const windowPieData = Object.values(
+    windowMouseData.reduce((accumulator, entry) => {
+      const windowName = entry?.window || 'Unknown';
+      if (!accumulator[windowName]) {
+        accumulator[windowName] = {
+          window: windowName,
+          mouseClicks: 0,
+        };
+      }
+
+      accumulator[windowName].mouseClicks += entry?.mouseClicks || 0;
+      return accumulator;
+    }, {})
+  );
+
   if (!employee) {
     return <div className="text-center text-red-500 mt-10">Employee not found</div>;
   }
@@ -208,6 +260,34 @@ export default function EmployeeDetail() {
               employee.status === 'Away' ? 'text-yellow-500' : 'text-red-500'
             }`}>
               Status: {employee.status}
+            </p>
+          </div>
+        </div>
+
+        {/* Policy Engine Pay Summary */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-6">
+          <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+            <p className="text-sm text-gray-600">Accumulated Pay</p>
+            <p className="text-2xl font-bold text-green-700">
+              {policyResult ? `$${(policyResult.accumulated_pay || 0).toFixed(2)}` : '$0.00'}
+            </p>
+          </div>
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <p className="text-sm text-gray-600">Policy Mode</p>
+            <p className="text-lg font-semibold text-blue-700 capitalize">
+              {policyResult?.config?.mode ? policyResult.config.mode.replace('_', ' ') : 'N/A'}
+            </p>
+          </div>
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+            <p className="text-sm text-gray-600">Time Unit (sec)</p>
+            <p className="text-lg font-semibold text-yellow-700">
+              {policyResult?.config?.time_unit_seconds || 60}
+            </p>
+          </div>
+          <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+            <p className="text-sm text-gray-600">Total Productive Time</p>
+            <p className="text-lg font-semibold text-purple-700">
+              {policyResult ? `${(policyResult.total_productive_seconds || 0).toFixed(1)}s` : '0.0s'}
             </p>
           </div>
         </div>
@@ -244,6 +324,21 @@ export default function EmployeeDetail() {
           </ResponsiveContainer>
         </div>
 
+        {/* Accumulated Pay Graph */}
+        <div className="bg-gray-100 p-4 rounded-lg mt-6">
+          <h3 className="text-lg font-medium text-gray-700 mb-4">Accumulated Pay Over Time</h3>
+          <ResponsiveContainer width="100%" height={250}>
+            <LineChart data={payGraphData}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="date" />
+              <YAxis />
+              <Tooltip formatter={(value) => [`$${Number(value).toFixed(2)}`, 'Accumulated Pay']} />
+              <Legend />
+              <Line type="monotone" dataKey="accumulatedPay" stroke="#16a34a" name="Accumulated Pay ($)" />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+
         {/* Bar and Pie Charts */}
         <div className="grid grid-cols-2 gap-4 mt-6">
           <ResponsiveContainer width="100%" height={250}>
@@ -262,11 +357,11 @@ export default function EmployeeDetail() {
   <div className="h-40 overflow-y-auto border border-gray-300 rounded-lg p-2 w-72 bg-white shadow-md">
     <h3 className="text-center text-sm font-semibold mb-2">Mouse Clicks per Window</h3>
     <ul>
-      {windowMouseData.map((entry, index) => (
-        <li key={index} className="text-sm text-gray-700 flex items-center">
+      {windowPieData.map((entry) => (
+        <li key={entry.window} className="text-sm text-gray-700 flex items-center">
           <span 
             className="inline-block w-4 h-4 mr-2 rounded-full" 
-            style={{ backgroundColor: COLORS[index % COLORS.length] }}
+            style={{ backgroundColor: getStableColorForLabel(entry.window) }}
           ></span>
           {entry.window}
         </li>
@@ -278,7 +373,7 @@ export default function EmployeeDetail() {
   <ResponsiveContainer width={300} height={250}>
     <PieChart>
       <Pie 
-        data={windowMouseData} 
+        data={windowPieData} 
         dataKey="mouseClicks" 
         nameKey="window" 
         cx="50%" 
@@ -287,8 +382,8 @@ export default function EmployeeDetail() {
         innerRadius={40}
         fill="#8884d8"
       >
-        {windowMouseData.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+        {windowPieData.map((entry, index) => (
+          <Cell key={`cell-${entry.window}-${index}`} fill={getStableColorForLabel(entry.window)} />
         ))}
       </Pie>
       <Tooltip />

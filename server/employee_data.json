@@ -1,26 +1,26 @@
 {
     "1": {
-        "2026-04-07T10:05:25.786346": {
+        "2026-04-07T12:26:19.164487": {
             "employee_id": 1,
-            "timestamp": "2026-04-07T10:05:25.768921",
+            "timestamp": "2026-04-07T12:26:19.153538",
             "window_activity": {
-                "Unknown Window": {
+                "Code": {
                     "time_spent": 30,
                     "activities": {
                         "keyboard_activity": {
-                            "count": 0,
-                            "text": ""
+                            "count": 10,
+                            "text": "trggddfefe"
                         },
                         "mouse_movement_distance": {
-                            "count": 0,
+                            "count": 13891,
                             "text": ""
                         },
                         "mouse_clicks": {
-                            "count": 0,
+                            "count": 2,
                             "text": ""
                         },
                         "mouse_scrolls": {
-                            "count": 0,
+                            "count": 53,
                             "text": ""
                         }
                     }
@@ -28,25 +28,25 @@
             },
             "activity_summary": {
                 "SPEAKING": 0,
-                "NOT SPEAKING": 0,
-                "eyes_open_time": 0,
-                "eyes_closed_time": 0,
-                "eyes_not_detected_time": 0
+                "NOT SPEAKING": 30,
+                "eyes_open_time": 47.17,
+                "eyes_closed_time": 0.0,
+                "eyes_not_detected_time": 0.0
             }
         },
-        "2026-04-07T10:05:55.935582": {
+        "2026-04-07T12:27:06.811022": {
             "employee_id": 1,
-            "timestamp": "2026-04-07T10:05:55.925135",
+            "timestamp": "2026-04-07T12:27:06.805146",
             "window_activity": {
-                "Unknown Window": {
-                    "time_spent": 30,
+                "Code": {
+                    "time_spent": 22,
                     "activities": {
                         "keyboard_activity": {
                             "count": 0,
                             "text": ""
                         },
                         "mouse_movement_distance": {
-                            "count": 0,
+                            "count": 633,
                             "text": ""
                         },
                         "mouse_clicks": {
@@ -54,33 +54,20 @@
                             "text": ""
                         },
                         "mouse_scrolls": {
-                            "count": 0,
+                            "count": 118,
                             "text": ""
                         }
                     }
-                }
-            },
-            "activity_summary": {
-                "SPEAKING": 0,
-                "NOT SPEAKING": 0,
-                "eyes_open_time": 0,
-                "eyes_closed_time": 0,
-                "eyes_not_detected_time": 0
-            }
-        },
-        "2026-04-07T10:06:26.087957": {
-            "employee_id": 1,
-            "timestamp": "2026-04-07T10:06:26.082703",
-            "window_activity": {
-                "Unknown Window": {
-                    "time_spent": 30,
+                },
+                "Google Chrome": {
+                    "time_spent": 8,
                     "activities": {
                         "keyboard_activity": {
                             "count": 0,
                             "text": ""
                         },
                         "mouse_movement_distance": {
-                            "count": 0,
+                            "count": 1682,
                             "text": ""
                         },
                         "mouse_clicks": {
@@ -88,7 +75,7 @@
                             "text": ""
                         },
                         "mouse_scrolls": {
-                            "count": 0,
+                            "count": 181,
                             "text": ""
                         }
                     }
@@ -96,33 +83,33 @@
             },
             "activity_summary": {
                 "SPEAKING": 0,
-                "NOT SPEAKING": 0,
-                "eyes_open_time": 0,
-                "eyes_closed_time": 0,
-                "eyes_not_detected_time": 0
+                "NOT SPEAKING": 30,
+                "eyes_open_time": 47.4,
+                "eyes_closed_time": 0.0,
+                "eyes_not_detected_time": 0.0
             }
         },
-        "2026-04-07T10:06:56.231147": {
+        "2026-04-07T12:27:54.096419": {
             "employee_id": 1,
-            "timestamp": "2026-04-07T10:06:56.227205",
+            "timestamp": "2026-04-07T12:27:54.092066",
             "window_activity": {
-                "Unknown Window": {
+                "Code": {
                     "time_spent": 30,
                     "activities": {
                         "keyboard_activity": {
-                            "count": 0,
-                            "text": ""
+                            "count": 4,
+                            "text": "spea"
                         },
                         "mouse_movement_distance": {
-                            "count": 0,
+                            "count": 13484,
                             "text": ""
                         },
                         "mouse_clicks": {
-                            "count": 0,
+                            "count": 16,
                             "text": ""
                         },
                         "mouse_scrolls": {
-                            "count": 0,
+                            "count": 193,
                             "text": ""
                         }
                     }
@@ -130,131 +117,29 @@
             },
             "activity_summary": {
                 "SPEAKING": 0,
-                "NOT SPEAKING": 0,
-                "eyes_open_time": 0,
-                "eyes_closed_time": 0,
-                "eyes_not_detected_time": 0
+                "NOT SPEAKING": 30,
+                "eyes_open_time": 47.04,
+                "eyes_closed_time": 0.0,
+                "eyes_not_detected_time": 0.0
             }
         },
-        "2026-04-07T10:07:26.373377": {
+        "2026-04-07T12:28:41.317432": {
             "employee_id": 1,
-            "timestamp": "2026-04-07T10:07:26.371297",
+            "timestamp": "2026-04-07T12:28:41.311575",
             "window_activity": {
-                "Unknown Window": {
+                "Code": {
                     "time_spent": 30,
                     "activities": {
                         "keyboard_activity": {
-                            "count": 0,
-                            "text": ""
+                            "count": 75,
+                            "text": "bothspealingvzcavspeakingisnotminonitoredandeyesopentimeisstillnotfikexewd\""
                         },
                         "mouse_movement_distance": {
-                            "count": 0,
+                            "count": 8214,
                             "text": ""
                         },
                         "mouse_clicks": {
-                            "count": 0,
-                            "text": ""
-                        },
-                        "mouse_scrolls": {
-                            "count": 0,
-                            "text": ""
-                        }
-                    }
-                }
-            },
-            "activity_summary": {
-                "SPEAKING": 0,
-                "NOT SPEAKING": 0,
-                "eyes_open_time": 0,
-                "eyes_closed_time": 0,
-                "eyes_not_detected_time": 0
-            }
-        },
-        "2026-04-07T10:07:47.716303": {
-            "employee_id": 1,
-            "timestamp": "2026-04-07T10:07:47.707090",
-            "window_activity": {
-                "Unknown Window": {
-                    "time_spent": 30,
-                    "activities": {
-                        "keyboard_activity": {
-                            "count": 0,
-                            "text": ""
-                        },
-                        "mouse_movement_distance": {
-                            "count": 0,
-                            "text": ""
-                        },
-                        "mouse_clicks": {
-                            "count": 0,
-                            "text": ""
-                        },
-                        "mouse_scrolls": {
-                            "count": 0,
-                            "text": ""
-                        }
-                    }
-                }
-            },
-            "activity_summary": {
-                "SPEAKING": 0,
-                "NOT SPEAKING": 0,
-                "eyes_open_time": 0,
-                "eyes_closed_time": 0,
-                "eyes_not_detected_time": 0
-            }
-        },
-        "2026-04-07T10:07:56.498523": {
-            "employee_id": 1,
-            "timestamp": "2026-04-07T10:07:56.495125",
-            "window_activity": {
-                "Unknown Window": {
-                    "time_spent": 30,
-                    "activities": {
-                        "keyboard_activity": {
-                            "count": 0,
-                            "text": ""
-                        },
-                        "mouse_movement_distance": {
-                            "count": 0,
-                            "text": ""
-                        },
-                        "mouse_clicks": {
-                            "count": 0,
-                            "text": ""
-                        },
-                        "mouse_scrolls": {
-                            "count": 0,
-                            "text": ""
-                        }
-                    }
-                }
-            },
-            "activity_summary": {
-                "SPEAKING": 0,
-                "NOT SPEAKING": 0,
-                "eyes_open_time": 0,
-                "eyes_closed_time": 0,
-                "eyes_not_detected_time": 0
-            }
-        },
-        "2026-04-07T10:11:45.310290": {
-            "employee_id": 1,
-            "timestamp": "2026-04-07T10:11:45.297108",
-            "window_activity": {
-                "Unknown Window": {
-                    "time_spent": 30,
-                    "activities": {
-                        "keyboard_activity": {
-                            "count": 86,
-                            "text": "ayusdhsfjcvhsnotepadthisasisanonlinenotepadusedtostoreinformationsanoutbotutsomethiong"
-                        },
-                        "mouse_movement_distance": {
-                            "count": 5258,
-                            "text": ""
-                        },
-                        "mouse_clicks": {
-                            "count": 5,
+                            "count": 8,
                             "text": ""
                         },
                         "mouse_scrolls": {
@@ -267,58 +152,58 @@
             "activity_summary": {
                 "SPEAKING": 0,
                 "NOT SPEAKING": 30,
-                "eyes_open_time": 575.31,
+                "eyes_open_time": 46.97,
                 "eyes_closed_time": 0.0,
                 "eyes_not_detected_time": 0.0
             }
         },
-        "2026-04-07T10:12:23.345967": {
+        "2026-04-07T12:31:47.310664": {
             "employee_id": 1,
-            "timestamp": "2026-04-07T10:12:23.336838",
+            "timestamp": "2026-04-07T12:31:47.297271",
             "window_activity": {
-                "Unknown Window": {
-                    "time_spent": 30,
-                    "activities": {
-                        "keyboard_activity": {
-                            "count": 28,
-                            "text": "sotthertheiotherbvdnpmrundev"
-                        },
-                        "mouse_movement_distance": {
-                            "count": 9805,
-                            "text": ""
-                        },
-                        "mouse_clicks": {
-                            "count": 5,
-                            "text": ""
-                        },
-                        "mouse_scrolls": {
-                            "count": 490,
-                            "text": ""
-                        }
-                    }
-                }
-            },
-            "activity_summary": {
-                "SPEAKING": 0,
-                "NOT SPEAKING": 30,
-                "eyes_open_time": 581.89,
-                "eyes_closed_time": 0.0,
-                "eyes_not_detected_time": 0.0
-            }
-        },
-        "2026-04-07T10:13:01.331122": {
-            "employee_id": 1,
-            "timestamp": "2026-04-07T10:13:01.328990",
-            "window_activity": {
-                "Unknown Window": {
-                    "time_spent": 30,
+                "Code": {
+                    "time_spent": 30.96,
                     "activities": {
                         "keyboard_activity": {
                             "count": 0,
                             "text": ""
                         },
                         "mouse_movement_distance": {
-                            "count": 7291,
+                            "count": 7799,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 2,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 232,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "SPEAKING": 0.0,
+                "NOT SPEAKING": 30.96,
+                "eyes_open_time": 31.38,
+                "eyes_closed_time": 0.0,
+                "eyes_not_detected_time": 0.0
+            }
+        },
+        "2026-04-07T12:36:08.947318": {
+            "employee_id": 1,
+            "timestamp": "2026-04-07T12:36:08.937938",
+            "window_activity": {
+                "Code": {
+                    "time_spent": 31.208403625001665,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 24,
+                            "text": "cvwhyaretheselogsinfloat"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 6518,
                             "text": ""
                         },
                         "mouse_clicks": {
@@ -326,7 +211,7 @@
                             "text": ""
                         },
                         "mouse_scrolls": {
-                            "count": 224,
+                            "count": 0,
                             "text": ""
                         }
                     }
@@ -334,25 +219,46 @@
             },
             "activity_summary": {
                 "SPEAKING": 0,
-                "NOT SPEAKING": 30,
-                "eyes_open_time": 580.82,
+                "NOT SPEAKING": 31.208403625001665,
+                "eyes_open_time": 31.43,
                 "eyes_closed_time": 0.0,
                 "eyes_not_detected_time": 0.0
             }
         },
-        "2026-04-07T10:13:39.274243": {
+        "2026-04-07T12:37:36.983251": {
             "employee_id": 1,
-            "timestamp": "2026-04-07T10:13:39.271652",
+            "timestamp": "2026-04-07T12:37:36.968847",
             "window_activity": {
-                "Unknown Window": {
-                    "time_spent": 30,
+                "Code": {
+                    "time_spent": 20,
                     "activities": {
                         "keyboard_activity": {
                             "count": 0,
                             "text": ""
                         },
                         "mouse_movement_distance": {
-                            "count": 548,
+                            "count": 2075,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 2,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 14,
+                            "text": ""
+                        }
+                    }
+                },
+                "Notes": {
+                    "time_spent": 10,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 141,
+                            "text": "jbhsvhfbhsdbjcvbsdjnvjdsxnbjhvndjvndshjCNnxvdkvbjsdvdvbxjbcxjvhdjosjvkdsbjkcakcbjvmdjvbjxmIcfnsknvkdjvibdsvndjxbjvjsigbfuejfiejhudmkvndsjvnjc"
+                        },
+                        "mouse_movement_distance": {
+                            "count": 18419,
                             "text": ""
                         },
                         "mouse_clicks": {
@@ -360,7 +266,7 @@
                             "text": ""
                         },
                         "mouse_scrolls": {
-                            "count": 105,
+                            "count": 91,
                             "text": ""
                         }
                     }
@@ -369,7 +275,151 @@
             "activity_summary": {
                 "SPEAKING": 0,
                 "NOT SPEAKING": 30,
-                "eyes_open_time": 579.73,
+                "eyes_open_time": 47.31,
+                "eyes_closed_time": 0.0,
+                "eyes_not_detected_time": 0.0
+            }
+        },
+        "2026-04-07T12:38:24.564765": {
+            "employee_id": 1,
+            "timestamp": "2026-04-07T12:38:24.555151",
+            "window_activity": {
+                "Code": {
+                    "time_spent": 30,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "SPEAKING": 0,
+                "NOT SPEAKING": 30,
+                "eyes_open_time": 47.33,
+                "eyes_closed_time": 0.0,
+                "eyes_not_detected_time": 0.0
+            }
+        },
+        "2026-04-07T12:39:12.186698": {
+            "employee_id": 1,
+            "timestamp": "2026-04-07T12:39:12.179778",
+            "window_activity": {
+                "Code": {
+                    "time_spent": 15,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 2781,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 174,
+                            "text": ""
+                        }
+                    }
+                },
+                "Notes": {
+                    "time_spent": 1,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 0,
+                            "text": ""
+                        }
+                    }
+                },
+                "Google Chrome": {
+                    "time_spent": 14,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 3846,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 1,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 245,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "SPEAKING": 0,
+                "NOT SPEAKING": 30,
+                "eyes_open_time": 47.37,
+                "eyes_closed_time": 0.0,
+                "eyes_not_detected_time": 0.0
+            }
+        },
+        "2026-04-07T12:40:00.091175": {
+            "employee_id": 1,
+            "timestamp": "2026-04-07T12:40:00.078439",
+            "window_activity": {
+                "Google Chrome": {
+                    "time_spent": 30,
+                    "activities": {
+                        "keyboard_activity": {
+                            "count": 0,
+                            "text": ""
+                        },
+                        "mouse_movement_distance": {
+                            "count": 7338,
+                            "text": ""
+                        },
+                        "mouse_clicks": {
+                            "count": 9,
+                            "text": ""
+                        },
+                        "mouse_scrolls": {
+                            "count": 141,
+                            "text": ""
+                        }
+                    }
+                }
+            },
+            "activity_summary": {
+                "SPEAKING": 0,
+                "NOT SPEAKING": 30,
+                "eyes_open_time": 47.64,
                 "eyes_closed_time": 0.0,
                 "eyes_not_detected_time": 0.0
             }

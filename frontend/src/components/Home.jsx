@@ -1,125 +1,60 @@
 
-
-// import { useRouter } from 'next/navigation';
-import { FaHome, FaUsers, FaChartBar, FaCog, FaSignOutAlt, FaPlus, FaTasks, FaFileAlt, FaUserCircle } from 'react-icons/fa';
+import { FaChartBar, FaUsers } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/AFK.png';
-
-const employees = [
-  { id: 1, name: 'Rohan Sharma', role: 'Software Engineer' },
-  { id: 2, name: 'Ananya Verma', role: 'UI/UX Designer' },
-  { id: 3, name: 'Karan Mehta', role: 'Data Analyst' },
-];
+import Navbar from './Navbar';
 
 export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex bg-gray-200">
-      {/* Sidebar */}
-      <aside className="w-72 bg-blue-800 text-white min-h-screen p-6 flex flex-col justify-between">
-        <div>
-          <div className="flex flex-col items-center mb-6">
-            <img src={logo} alt="AFK Guardian" className="h-20 w-20 object-contain mb-2" />
-            <h2 className="text-2xl font-bold text-center">AFK Guardian</h2>
-          </div>
-          <nav>
-            <ul className="space-y-4">
-              <li className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-700 transition cursor-pointer" onClick={() => router.push('/')}> 
-                <FaHome className="text-lg" />
-                <span>Home</span>
-              </li>
-              <li className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-700 transition cursor-pointer" onClick={() => router.push('/employees')}>
-                <FaUsers className="text-lg" />
-                <span>Employees</span>
-              </li>
-              <li className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-700 transition cursor-pointer" onClick={() => router.push('/reports')}>
-                <FaChartBar className="text-lg" />
-                <span>Reports</span>
-              </li>
-              <li className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-700 transition cursor-pointer" onClick={() => router.push('/settings')}>
-                <FaCog className="text-lg" />
-                <span>Settings</span>
-              </li>
-            </ul>
-          </nav>
+    <div className="min-h-screen bg-gray-200">
+      <Navbar />
 
-          {/* Quick Actions */}
-          <div className="mt-10">
-            <h3 className="text-lg font-semibold mb-3">Quick Actions</h3>
-            <ul className="space-y-4">
-              <li className="flex items-center space-x-3 p-3 rounded-lg bg-blue-700 hover:bg-blue-600 transition cursor-pointer">
-                <FaPlus className="text-lg" />
-                <span>Add New Employee</span>
-              </li>
-              <li className="flex items-center space-x-3 p-3 rounded-lg bg-blue-700 hover:bg-blue-600 transition cursor-pointer">
-                <FaTasks className="text-lg" />
-                <span>Manage Tasks</span>
-              </li>
-              <li className="flex items-center space-x-3 p-3 rounded-lg bg-blue-700 hover:bg-blue-600 transition cursor-pointer">
-                <FaFileAlt className="text-lg" />
-                <span>Generate Report</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <main className="w-full max-w-6xl mx-auto px-6 py-10">
+        <section className="bg-white shadow-lg rounded-lg p-8 md:p-12">
+          <h1 className="text-4xl font-bold text-gray-800">AFK Guardian System</h1>
+          <p className="text-gray-600 text-lg mt-4 leading-relaxed">
+            AFK Guardian helps organizations monitor work activity in real time by collecting
+            window usage, keyboard and mouse interaction, speaking status, and eye-state trends.
+            It gives admins a clear view of focus patterns and employee productivity.
+          </p>
 
-        {/* Logout Option */}
-        <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-red-600 transition cursor-pointer" onClick={() => alert('Logging out...')}>
-          <FaSignOutAlt className="text-lg" />
-          <span>Logout</span>
-        </div>
-      </aside>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <div className="bg-gray-100 rounded-lg p-6">
+              <h2 className="text-2xl font-semibold text-gray-800">What This Project Does</h2>
+              <ul className="mt-3 text-gray-600 space-y-2">
+                <li>Tracks active application usage over time</li>
+                <li>Captures keyboard and mouse engagement signals</li>
+                <li>Monitors eye-open, eye-closed, and away durations</li>
+                <li>Streams data for admin dashboards and reports</li>
+              </ul>
+            </div>
 
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col ">
-      <nav className="w-full bg-blue-800 text-white py-4 px-6 flex justify-between items-center shadow-lg">
-          <div className="flex items-center space-x-2">
-            <img src={logo} alt="AFK Guardian" className="h-10 w-10 object-contain" />
-            <h1 className="text-xl font-semibold">AFK Guardian</h1>
-          </div>
-          <div className="flex items-center space-x-2 cursor-pointer">
-            <FaUserCircle className="text-2xl" />
-            <span className="text-sm">John Doe</span>
-          </div>
-        </nav>
-        {/* Page Title */}
-        <div className="text-center mt-6">
-          <h1 className="text-4xl font-bold text-gray-800">Welcome to Employee Dashboard</h1>
-          <p className="text-gray-600 text-lg mt-2">Manage your team efficiently</p>
-        </div>
-
-        {/* Employee List */}
-        <div className="w-full max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8 mt-8">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-semibold text-gray-800">Employee List</h2>
-            <button className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
-              + Add Employee
-            </button>
-          </div>
-
-          {/* Employee Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {employees.map((employee) => (
-              <div key={employee.id} className="bg-gray-100 hover:bg-gray-200 p-6 rounded-lg shadow-lg cursor-pointer transition flex flex-col items-center text-center">
-                {/* Employee Avatar */}
-                <div className="w-24 h-24 bg-blue-500 text-white flex items-center justify-center rounded-full text-3xl font-semibold">
-                  {employee.name.charAt(0)}
-                </div>
-
-                {/* Employee Info */}
-                <h3 className="text-xl font-medium text-gray-700 mt-4">{employee.name}</h3>
-                <p className="text-sm text-gray-500">{employee.role}</p>
-
-                {/* View Profile Button */}
-                <button className="mt-4 bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition cursor-pointer" onClick={() => navigate(`/employee/${employee.id}`)}>
-                  View Profile
+            <div className="bg-gray-100 rounded-lg p-6">
+              <h2 className="text-2xl font-semibold text-gray-800">Admin Navigation</h2>
+              <p className="mt-3 text-gray-600">
+                Use Employees or Reports to open the employee dashboard and inspect detailed metrics.
+              </p>
+              <div className="flex flex-wrap gap-4 mt-6">
+                <button
+                  onClick={() => navigate('/employees')}
+                  className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition flex items-center gap-2"
+                >
+                  <FaUsers />
+                  Employees
+                </button>
+                <button
+                  onClick={() => navigate('/reports')}
+                  className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition flex items-center gap-2"
+                >
+                  <FaChartBar />
+                  Reports
                 </button>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   );
 }

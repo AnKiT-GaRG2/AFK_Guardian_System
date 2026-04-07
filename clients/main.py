@@ -79,9 +79,10 @@ def main():
         # ✅ Increment time spent on the active window
         my_map[active_window]['time_spent'] += 1
 
-        # ✅ Track user activity in new_map
+        # Eye tracker already returns cumulative values for the current interval,
+        # so store a snapshot instead of re-adding each second.
         for key, value in check_user_activity().items():
-            new_map[key] += float(value)
+            new_map[key] = float(value)
         
         voice_state = check_voice_activity(tracker)
         if voice_state is not None:
